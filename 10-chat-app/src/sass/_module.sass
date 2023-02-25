@@ -1,0 +1,86 @@
+@import 'mixins'
+@import 'variables'
+.chat-send
+    @include borderChatRight
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, .2)
+    align-self: flex-end
+    &-image
+        align-self: flex-end
+
+.chat-receive
+    @include borderChatLeft
+    color: $ModerateViolet
+    background-color: $GrayishBlue
+
+.chat-image
+    border-radius: 10px
+    max-width: 50px
+    max-height: 50px
+    margin: 0 5px
+
+.chat
+    max-width: 60%
+    margin-bottom: 4%
+    font-size: .9rem
+    padding: 2% 5%
+    text-align: left
+
+.select-for-buy
+    @include borderChatLeft
+    @include flex-center
+    justify-content: flex-start
+    background: linear-gradient(90deg, $LightMagenta 10%, $LightViolet 100%)
+    max-width: 70%
+    padding: 2% 5%
+    margin-bottom: 3%
+    color: white
+    p
+        @include flex-center
+        margin-left: 7%
+        width: 100%
+        font-size: .9rem
+        justify-content: space-between
+        span
+            font-weight: bold
+            font-size: 1.2rem
+
+.checkbox-round
+    width: 1.3em
+    height: 1.3em
+    background-color: $LightMagenta
+    border-radius: 50%
+    vertical-align: middle
+    border: 1px solid #ddd
+    appearance: none
+    -webkit-appearance: none
+    outline: none
+    cursor: pointer
+
+    &:checked
+        background-color: $LightViolet
+
+.message-box-submit
+    @include flex-center
+    width: 100%
+    margin-bottom: 5%
+    padding: 2% 5%
+    border-radius: 50px
+    justify-content: space-between
+    background-color: $White
+    button
+        @include flex-center
+        justify-content: center
+        border-radius: 50px
+        background-color: $VeryDarkDesaturatedViolet
+        width: 40px
+        height: 40px
+        border: none
+        &:active
+            transform: scale(.95)
+    input
+        outline: none
+        border: none
+        max-width: 80%
+        padding-left: 5%
+        &::placeholder
+            padding-left: 5%

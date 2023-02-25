@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap')
+@import 'variables'
+@import 'mixins'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+html
+    font-size: 14px
+
+a
+    text-decoration: none
+
+body
+    padding: 5% 5% 0
+    background-color: $LightGrayishViolet
+    position: relative
+    @include flex-center
+    justify-content: center
+    @include desktop
+        height: 100vh
+        overflow: hidden
+    &::after
+        content: ''
+        position: absolute
+        width: 40%
+        height: 60%
+        background: linear-gradient( $LightMagenta 5%, $LightViolet 50%)
+        top: 0
+        left: 0
+        z-index: -1
+        border-bottom-right-radius: 500px
+        border-bottom-left-radius: 500px
+        @include desktop
+            width: 30%
+            height: 85%
+    &::before
+        content: ''
+        position: absolute
+        width: 50%
+        height: 60%
+        background: rgba(0, 0, 0, .05)
+        bottom: 0
+        right: 0
+        z-index: -1
+        border-top-right-radius: 500px
+        border-top-left-radius: 500px
+        @include desktop
+            width: 30%
+            height: 85%
+main
+    @include flex-center
+    flex-direction: column
+    justify-content: center
+    padding: 0 5% 5%
+    @include desktop
+        flex-direction: row
+        padding: 0 13%
+
+i
+    color: $White
+    font-weight: bold
+    font-size: 1.2rem

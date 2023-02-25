@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./css/app.css" />
+
+        <title>Card Interactive</title>
+    </head>
+    <body>
+        <div class="cards">
+            <div class="cards-container">
+                <div class="card card-verse">
+                    <div class="card-targe"></div>
+                    <div class="card-cvc"><span>000</span></div>
+                </div>
+                <div class="card card-front">
+                    <div class="card-logo">
+                        <div class="circle-1"></div>
+                        <div class="circle-2"></div>
+                    </div>
+                    <div class="card-number">
+                        <span>0000 0000 0000 0000</span>
+                    </div>
+                    <div class="card-name-date">
+                        <span>Jane Appleseed</span> <span>00/00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-white"></div>
+        </div>
+        <div>
+            <form action="#" class="form">
+                <div class="input">
+                    <label for="card-name">Cardholder Name</label>
+                    <input
+                        type="text"
+                        id="card-name"
+                        placeholder="e.g. Jane Appleseed"
+                    />
+                </div>
+                <div class="input">
+                    <label for="card-number">Card Number</label>
+                    <input
+                        type="number"
+                        placeholder="e.g. 1234 5678 9123"
+                        id="card-number"
+                    />
+                </div>
+                <div class="form-date-container">
+                    <div class="form-date">
+                        <label for="card-date">Exp. Date (MM/YY) </label>
+
+                        <input type="number" id="" placeholder="MM" />
+                        <input type="number" id="" placeholder="YY" />
+                    </div>
+                    <div class="form-cvc">
+                        <label for="card-cvc">CVC</label>
+                        <input
+                            type="number"
+                            placeholder="e.g. 123"
+                            id="card-cvc"
+                        />
+                    </div>
+                </div>
+                <button class="button-confirm">Confirm</button>
+            </form>
+        </div>
+        <!-- Completed state start -->
+
+        <!-- Thank you! We've added your card details Continue -->
+    </body>
+    <script src="../src/js/button.js"></script>
+</html>

@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/projeto7/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+}
+
+header{
+    width: 90%;
+    height: 25vh;
+    background-color: hsl(228, 56%, 26%);
+    margin: 30% auto 5%;
+    border-radius: 10px 40% 10px 10px ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+section{
+    width: 90%;
+    height: 20vh;
+    background-color: hsl(228, 56%, 26%);
+    margin: auto;
+    border-radius: 10px;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr) 2fr;
+    padding: 10px 0px;
+    row-gap: 5px;
+    box-sizing: border-box;
+}
+
+.document{
+    width: 40px;
+    height: 40px;
+    background-color: hsl(229, 57%, 11%);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10%;
+    
+}
+
+
+.logo{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: center;
+    align-self: center;
+    margin-left: 15%;
+
+
+}
+
+.icones{
+    display: flex;
+    margin-left: 15%;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3 ;
+    
+}
+
+section h1{
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 1em;
+    font-weight: normal;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+    justify-self: center;
+}
+
+section strong{
+    color: white;
+}
+
+section h2{
+    background-color: white;
+    width: 50%;
+    border-radius: 5px;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(50%, 50%);
+
+}
+
+section h2{
+    font-size: 1em;
+
+}
+
+section p {
+    color: white;
+    font-weight: 300;
+}
+
+.fora{
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.antes{
+    height: 100%;
+    width: 70%;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+    position: relative;
+}
+
+.depois{
+    height: 100%;
+    width: 7%;
+    position: absolute;
+    right: 1px;
+    background-color: white;
+    border-radius: 10px;
+
+
+}
+
+.pum{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: flex-start;
+    justify-self: center;
+}
+.pdois{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+@media screen and (min-width:600px){
+    body{
+        height: 100vh;
+        background-color: hsl(229, 57%, 11%);
+        background-image: url(/projeto7/images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: bottom;
+        display: flex;
+    }
+
+    header{
+        width: 40%;
+        margin: auto;
+    }
+
+    section{
+        width: 40%;
+        transform: translateY(10%);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr repeat(3,1fr) ;
+        }
+
+    section h2{
+        transform: translate(90%, -90%);
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+
+    section h2::after{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+            /*Aqui entra a cor da "aba" do balão */
+            border-top: 20px solid #ffffff;
+            bottom: -10px; /*localização. Experimente alterar para 'bottom'*/
+            right: 5%;
+    }
+
+
+    section h1{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+
+    .fora{
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+
+    .pum{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .pdois{
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+    }
+    
+
+
+    
+}

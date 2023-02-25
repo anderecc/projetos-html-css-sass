@@ -1,0 +1,72 @@
+@import 'mixins'
+@import 'variables'
+
+// phone 
+.phone
+    background-color: $White
+    padding: 15px
+    border-radius: 55px
+    margin: 10%
+    box-shadow: 0 5px 20px 5px rgba(0, 0, 0, .3)
+    max-width: 375px
+
+    &-container
+        border-radius: 50px
+        overflow: hidden
+        background-color: $LightGrayishViolet
+        &-header
+            @include flex-center
+            justify-content: space-evenly
+            background: linear-gradient(90deg, $LightViolet 30%, $LightMagenta 100%)
+            position: relative
+            padding: 30px 5px 15px
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+            margin-bottom: 5%
+            box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3)
+            img
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                border: 2px solid $White
+            &-notch
+                position: absolute
+                width: 50%
+                height: 25px
+                top: 0
+                border-bottom-left-radius: 15px
+                border-bottom-right-radius: 15px
+                margin: 0 auto
+                background-color: $White
+        &-contact
+            flex: .7
+            &-name
+                color: $White
+                font-size: 1.1rem
+                font-weight: 600
+            &-info
+                font-size: .7rem
+                color: $GrayishBlue
+// message box
+.message-box
+    margin: 0 5%
+    display: flex
+    flex-direction: column
+
+// about app
+.text-about
+    text-align: center
+    @include desktop
+        text-align: left
+    &-h2
+        font-size: 2.5rem
+        font-weight: 600
+        color: $VeryDarkDesaturatedViolet
+        margin-bottom: 5%
+        @include desktop
+            font-size: 3rem
+
+    &-p
+        color: $DarkGrayishViolet
+        @include desktop
+            font-size: 1.2rem

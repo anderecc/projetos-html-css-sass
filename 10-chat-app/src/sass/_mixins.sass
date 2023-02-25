@@ -1,0 +1,18 @@
+@mixin borderChatLeft
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 20px
+    border-bottom-left-radius: 5px
+@mixin borderChatRight
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 20px
+
+@mixin flex-center
+    display: flex
+    align-items: center
+
+@mixin desktop
+    @media screen and ( min-width: 875px )
+        @content

@@ -147,7 +147,7 @@ button{
 }
 
 .productive a::after{
-    content: url(/projeto11/images/icon-arrow.svg);
+    content: url(./images/icon-arrow.svg);
     margin-left: 5px;
     position: absolute;
 }
@@ -162,7 +162,7 @@ button{
 }
 
 .comentary-p::before{
-    content: url(/projeto11/images/icon-quotes.svg);
+    content: url(./images/icon-quotes.svg);
     display: block;
 }
 
@@ -232,7 +232,7 @@ footer a{
 }
 
 .phone::before{
-    content: url(/projeto11/images/icon-phone.svg);
+    content: url(./images/icon-phone.svg);
     margin-right: 10px;
 }
 .email{
@@ -240,7 +240,7 @@ footer a{
 }
 
 .email::before{
-    content: url(/projeto11/images/icon-email.svg);
+    content: url(./images/icon-email.svg);
     margin-right: 10px;
 }
 
